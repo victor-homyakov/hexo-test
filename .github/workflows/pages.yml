@@ -22,10 +22,8 @@ jobs:
           node-version: 16
           # File containing the version Spec of the version to use.  Examples: .nvmrc, .node-version.
           # node-version-file: .nvmrc
-          # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
-          # cache: # optional
-          # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
-          # cache-dependency-path: # optional
+          cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Cache
         uses: actions/cache@v3.0.2
